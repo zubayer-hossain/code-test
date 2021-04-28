@@ -194,10 +194,9 @@ class ProductController extends Controller
         dd($request->all(),$product->id);
         try {
             // Saving product data to product table
-            $product = new Product;
-            $product->title = $request->title;
-            $product->sku = $request->sku;
-            $product->description = $request->description;
+            $productData =  Product::find($product->id);
+            $productData->title = $request->title;
+            $productData->description = $request->description;
             $product->save();
             $product_id = $product->id;
 
