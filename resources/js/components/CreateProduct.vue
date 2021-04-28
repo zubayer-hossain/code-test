@@ -110,6 +110,10 @@ export default {
         variants: {
             type: Array,
             required: true
+        },
+        productdata: {
+            type: Object,
+            required: false
         }
     },
     data() {
@@ -188,17 +192,31 @@ export default {
                 product_variant_prices: this.product_variant_prices
             }
 
-
             axios.post('/product', product).then(response => {
                 console.log(response.data);
+                if (response.data === "success"){
+                    alert('Product Saved');
+                    window.location.href = "/product";
+                }
+                else{
+                    alert('Can not save product');
+                }
             }).catch(error => {
-                console.log(error);
+                alert('Can not save product');
             })
-
             console.log(product);
         }
 
-
+    },
+    created() {
+        if (typeof this.productdata !== 'undefined') {
+            this.product_name = this.productdata.title;
+            this.product_sku = this.productdata.sku;
+            this.description = this.productdata.description;
+            this.product_variant = this.productdata.product_variant;
+            this.product_variant_prices = this.productdata.product_variant_prices;
+        }
+        console.log(this.productData);
     },
     mounted() {
         console.log('Component mounted.')

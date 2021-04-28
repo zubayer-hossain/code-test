@@ -11,6 +11,6 @@ class VariantSeeder extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }
