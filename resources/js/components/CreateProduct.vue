@@ -118,6 +118,7 @@ export default {
     },
     data() {
         return {
+            product_id: null,
             product_name: '',
             product_sku: '',
             description: '',
