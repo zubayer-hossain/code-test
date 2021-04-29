@@ -16,9 +16,9 @@
                 <div class="col-md-2">
                     <select name="variant" id="variant" class="form-control">
                         @foreach($variants as $variant)
-                            <option disabled style="color: #ced4da; font-size: 18px">{{ $variant->title }}</option>
-                            @foreach($variant->productVariant as $item)
-                                <option value="{{ $item->id }}">{{ $item->variant }}</option>
+                            <optgroup label="{{ $variant['name'] }}">
+                            @foreach($variant['children'] as $item)
+                                <option value="{{ $item }}">{{ $item }}</option>
                             @endforeach
                         @endforeach
                     </select>
@@ -111,15 +111,21 @@
                 <div class="col-md-6">
                     <p>
                         Showing {{ $count ? 1 : 0 }} to {{ $count ?? 0 }}
-                        out of  {{$products->total()}}
+                        out of  {{count($products)}}
                     </p>
 
                 </div>
+                @if(!$filterData['filtering'])
                 <div class="col-md-6">
                     {!! $products->links() !!}
                 </div>
+                @endif
             </div>
         </div>
     </div>
-
+    <script>
+        if ('{{  $filterData['variant'] }}' != ''){
+            document.getElementById("variant").value = '{{  $filterData['variant'] }}';
+        }
+    </script>
 @endsection

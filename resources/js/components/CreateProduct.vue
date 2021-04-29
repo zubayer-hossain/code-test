@@ -75,7 +75,7 @@
                                 </thead>
                                 <tbody>
                                 <tr v-for="variant_price in product_variant_prices">
-                                    <td>{{ variant_price.title }}</td>
+                                    <td>{{ variant_price.title }} </td>
                                     <td>
                                         <input type="text" class="form-control" v-model="variant_price.price">
                                     </td>
@@ -192,29 +192,56 @@ export default {
                 product_variant_prices: this.product_variant_prices
             }
 
-            axios.post('/product', product).then(response => {
-                console.log(response.data);
-                if (response.data === "success"){
-                    alert('Product Saved');
-                    window.location.href = "/product";
-                }
-                else{
-                    alert('Can not save product');
-                }
-            }).catch(error => {
-                alert('Can not save product');
-            })
+            if(this.product_id != null){
+                axios.put('/product/'+this.product_id, product).then(response => {
+                    console.log(response.data);
+                    if (response.data === "success"){
+                        alert('Product updated successfully!');
+                        window.location.href = "/product";
+                    }
+                    else if(response.data.error){
+                        alert(response.data.error);
+                    }
+                    else{
+                        alert('Can not update product.');
+                    }
+                }).catch(error => {
+                    alert('Can not update product.');
+                })
+            }
+            else{
+                axios.post('/product', product).then(response => {
+                    console.log(response.data);
+                    if (response.data === "success"){
+                        alert('Product Saved successfully!');
+                        window.location.href = "/product";
+                    }
+                    else if(response.data.error){
+                        alert(response.data.error);
+                    }
+                    else{
+                        alert('Can not save product.');
+                    }
+                }).catch(error => {
+                    alert('Can not save product.');
+                })
+            }
             console.log(product);
         }
 
     },
     created() {
         if (typeof this.productdata !== 'undefined') {
+            this.product_id = this.productdata.id
             this.product_name = this.productdata.title;
             this.product_sku = this.productdata.sku;
             this.description = this.productdata.description;
-            this.product_variant = this.productdata.product_variant;
-            this.product_variant_prices = this.productdata.product_variant_prices;
+            if(this.productdata.product_variant.length > 0){
+                this.product_variant = this.productdata.product_variant;
+            }
+            if(this.productdata.product_variant_prices_data.length > 0){
+                this.product_variant_prices = this.productdata.product_variant_prices_data;
+            }
         }
         console.log(this.productData);
     },

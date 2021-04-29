@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="f8c9c5df-a84b-4f88-961d-896c257fc500" name="Default Changelist" comment="" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="ElmWorkspace">
-    <elmProjects />
-    <settings elmCompilerPath="" elmFormatPath="" elmTestPath="" isElmFormatOnSaveEnabled="false" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
@@ -122,69 +104,10 @@
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1rme97uIQtLTzfRh9jotdGmnYQl" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="org.elm.workspace.PROJECT_DISCOVERY" value="true" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Z:\home\zubayer\Documents\codeTest\resources\js\components" />
-      <recent name="Z:\home\zubayer\Documents\codeTest" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="f8c9c5df-a84b-4f88-961d-896c257fc500" name="Default Changelist" comment="" />
-      <created>1619585538006</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1619585538006</updated>
-      <workItem from="1619585539274" duration="35822000" />
-      <workItem from="1619667547020" duration="21797000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="417" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619670832304">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="417" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1619670832304" />
-    <state width="498" height="443" key="SwitcherDM" timestamp="1619671755603">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="498" height="443" key="SwitcherDM/0.27.1366.741@0.27.1366.741" timestamp="1619671755603" />
-    <state x="0" y="41" width="695" height="731" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619683481385">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="0" y="41" width="695" height="731" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1619683481385" />
-    <state x="394" y="137" width="578" height="538" key="find.popup" timestamp="1619684627170">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="394" y="137" width="578" height="538" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1619684627170" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
 </project>
